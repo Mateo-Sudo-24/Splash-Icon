@@ -26,7 +26,30 @@ Shellnpx capacitor-assets generateMostrar más líneas
 Esto crea los íconos y pantallas de inicio en android/app/src/main/res/.
 
 5. Configuración en capacitor.config.ts
-TypeScriptimport type { CapacitorConfig } from '@capacitor/cli';const config: CapacitorConfig = {  appId: 'io.ionic.starter',  appName: 'Splash-Icon',  webDir: 'www',  bundledWebRuntime: false,  plugins: {    SplashScreen: {      launchShowDuration: 5000,      launchAutoHide: true,      backgroundColor: "#ffffffff",      androidSplashResourceName: "splash",      androidScaleType: "FIT_CENTER",      showSpinner: false,      splashFullScreen: true,      splashImmersive: true,    }  }};export default config;Mostrar más líneas
+
+import type { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'io.ionic.starter',
+  appName: 'Splash-Icon',
+  webDir: 'www',
+  bundledWebRuntime: false,
+  plugins: {
+     SplashScreen: {
+      launchShowDuration: 5000,
+      launchAutoHide: true,
+      backgroundColor: "#ffffffff",
+      androidSplashResourceName: "splash",
+      androidScaleType: "FIT_CENTER",
+      showSpinner: false,
+      splashFullScreen: true,
+      splashImmersive: true,
+    }
+  }
+};
+
+export default config;
+
 
 6. Editar AndroidManifest.xml
 Ruta del archivo: android/app/src/main/AndroidManifest.xml
@@ -40,4 +63,9 @@ En Android Studio:
 
 Selecciona un emulador o dispositivo físico
 Haz clic en el botón de ejecución (▶) para instalar el APK de prueba
+
+
+8. Generar APK para entrega
+En Android Studio:
+<img width="411" height="787" alt="image" src="https://github.com/user-attachments/assets/b198675e-4eaf-4b6a-8abb-a566a14e3c0a" />
 
