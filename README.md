@@ -1,5 +1,6 @@
-Guía completa: Crear APK con Ionic + Angular
-Proyecto: Splash-Icon
+#Guía completa: Crear APK con Ionic + Angular
+
+#Proyecto: Splash-Icon
 Esta guía explica cómo crear una app móvil con Ionic Angular, configurar ícono y splash personalizados, editar el AndroidManifest.xml, generar un APK funcional y subirlo a GitHub.
 
 1. Crear el proyecto Ionic
