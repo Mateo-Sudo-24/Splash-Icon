@@ -7,26 +7,32 @@ Esta guía detalla el proceso para crear una aplicación móvil utilizando Ionic
 Link De Descarga del APK: https://epnecuador-my.sharepoint.com/:u:/g/personal/mateo_paredes_epn_edu_ec/EZ6lWLJvg7lKkrXvhTxtX70BvUAuiX1haSstxr23E0r39w?e=3D5dkm
 
 1. Crear el proyecto Ionic
+
 Usamos la plantilla blank con soporte para Capacitor:
 Shellionic start Splash-Icon blank --type=angular --capacitorcd Splash-IconMostrar más líneas
 
 2. Configurar Capacitor (si no se hizo en el paso anterior)
-Shellnpm install @capacitor/core @capacitor/cli --savenpx cap init "Splash-Icon" io.ionic.starterMostrar más líneas
+
+npm install @capacitor/core @capacitor/cli --savenpx cap init "Splash-Icon" io.ionic.starterMostrar más líneas
 Esto genera el archivo capacitor.config.ts con la configuración base del proyecto.
 
 3. Construir la aplicación y añadir la plataforma Android
-Shellionic buildnpx cap add androidnpx cap sync androidMostrar más líneas
+
+ionic buildnpx cap add androidnpx cap sync androidMostrar más líneas
 
 4. Ícono y Splash personalizados
+
 Instalamos el generador oficial de recursos:
-Shellnpm install --save-dev @capacitor/assetsMostrar más líneas
+lnpm install --save-dev @capacitor/assetsMostrar más líneas
 Colocamos las imágenes base en la carpeta resources/:
+
 resources/
 ├── icon.png      # 1024x1024
 └── splash.png    # 2208x1242 (recomendado)
 
 Generamos los recursos:
-Shellnpx capacitor-assets generateMostrar más líneas
+
+npx capacitor-assets generateMostrar más líneas
 Esto crea los íconos y pantallas de inicio en android/app/src/main/res/.
 
 5. Configuración en capacitor.config.ts
@@ -56,13 +62,18 @@ export default config;
 
 
 6. Editar AndroidManifest.xml
+
 Ruta del archivo: android/app/src/main/AndroidManifest.xml
+
 Ejemplo de permisos:
 XML<uses-permission android:name="android.permission.INTERNET" /><uses-permission android:name="android.permission.CAMERA" />Mostrar más líneas
 
 7. Probar en Android Studio
+
 Abrimos el proyecto nativo:
-Shellnpx cap open androidMostrar más líneas
+
+npx cap open androidMostrar más líneas
+
 En Android Studio:
 
 Selecciona un emulador o dispositivo físico
